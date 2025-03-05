@@ -1,0 +1,133 @@
+.footer {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  border-radius: 30px;
+  flex-direction: column;
+  padding-top: 40px;
+
+  .top {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-grow: 100;
+    padding-bottom: 30px;
+
+    .biggerColumn {
+      width: 23%;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+
+      &:first-of-type {
+        padding-right: 30px;
+      }
+
+      .logoContainer {
+        display: flex;
+
+        img {
+          width: 50px;
+        }
+
+        h3 {
+          color: white;
+          padding-left: 10px;
+        }
+      }
+
+      p {
+        color: #b3b8c7;
+      }
+
+      .darkBtn,
+      .lightBtn {
+        font-weight: bold;
+        font-size: 15px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 300ms;
+        cursor: not-allowed;
+      }
+
+      .lightBtn {
+        color: #22262f;
+        background-color: #ffffff;
+        border: 1px solid white;
+
+        &:hover {
+          background-color: #c1c1c1;
+        }
+      }
+
+      .darkBtn {
+        color: white;
+        background-color: #383d49;
+        border: 1px solid #656a77;
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: #565c68;
+        }
+      }
+    }
+
+    .column {
+      width: 19%;
+      //padding-right: 15%;
+      h4 {
+        color: white;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      ul {
+        padding-bottom: 20px;
+        margin: 0;
+        padding-left: 0;
+      }
+
+      ul li {
+        padding-top: 9px;
+        list-style-type: none;
+        color: #b3b8c7;
+        transition: color 0.3s;
+        cursor: not-allowed;
+
+        &:hover {
+          color: #f5f6fa;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    font-size: 18px;
+    align-items: center;
+
+    .author {
+      color: rgba(221, 221, 221, 0.93);
+    }
+
+    .icons {
+      display: flex;
+      gap: 30px;
+      cursor: not-allowed;
+
+      svg {
+        color: rgba(221, 221, 221, 0.65);
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.consultationModalContentContainer {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+
+  .titleForm {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #a80068;
+  }
+
+  .describeForm {
+    margin-bottom: 15px;
+  }
+
+  .inputPhone {
+    margin-bottom: 10px;
+    width: 250px;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: none;
+    color: #020202;
+  }
+
+  .blockForBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    .buttonSend {
+      background: linear-gradient(135deg, #D5006D, #FF4081);
+      color: white;
+      border: none;
+      transition: 125ms ease;
+      padding: 10px 40px;
+      font-size: 16px;
+      border-radius: 8px;
+
+      &:hover {
+        cursor: not-allowed;
+        background: linear-gradient(135deg, #D5006D, #e82c6c);
+      }
+    }
+  }
+}

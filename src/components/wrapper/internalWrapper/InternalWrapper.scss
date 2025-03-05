@@ -1,0 +1,13 @@
+.internalWrapperContainer {
+  max-width: 1350px;
+  width: 100%;
+  display: flex;
+
+  border-radius: 3vw;
+  justify-content: center;
+  & > div {
+    padding: 0 50px;
+    width: 100%;
+    max-width: 1250px;
+  }
+}
