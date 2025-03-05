@@ -1,12 +1,18 @@
-# React + Vite
+# Проект: Сайт для працевлаштування студентів
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цей проект є **демонстраційною версією сайту**, який ілюструє, як міг би виглядати онлайн-сервіс для студентів, що хочуть вибрати курс для подальшого працевлаштування. Сайт побудований за допомогою **React** та **Vite**. **Функціональність є лише відображеною**, що означає, що всі блоки, пов'язані з вибором курсів і описом гарантії працевлаштування, поки що є лише візуальними елементами, без реального механізму взаємодії.
 
-Currently, two official plugins are available:
+## Опис функціональності:
+- Студенти можуть **переглядати доступні курси** та інформацію про них.
+- Відображена інформація про **високу ймовірність працевлаштування** після проходження курсу.
+- **Гарантія повернення коштів**: показана політика, згідно з якою у разі невдачі працевлаштування компанія повертає кошти за курс.
+- Сайт реалізовано лише у **комп'ютерній версії**, мобільна версія наразі відсутня.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технології:
+- **React** – для побудови інтерфейсу користувача.
+- **Vite** – для швидкої розробки та оптимізації.
+- **SCSS** – для зручного написання стилів з використанням препроцесора.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Цей проект є **демонстрацією** того, як може виглядати сайт для працевлаштування студентів. Він показує блоки з курсами, відображену інформацію про гарантію працевлаштування, але на цей момент **реальна функціональність ще не реалізована**.
