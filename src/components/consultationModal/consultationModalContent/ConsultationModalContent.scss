@@ -1,11 +1,16 @@
 .consultationModalContentContainer {
-  width: 700px;
+  max-width: 700px;
+  width:  100%  ;
   display: flex;
   flex-direction: column;
 
   .titleForm {
     margin-bottom: 10px;
     font-size: 25px;
+    @media (max-width: 800px) {
+
+      font-size: 19px;
+    }
     color: #a80068;
   }
 
@@ -27,7 +32,10 @@
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    @media (max-width: 800px) {
+      margin-top: 25px;
 
+    }
     .buttonSend {
       background: linear-gradient(135deg, #D5006D, #FF4081);
       color: white;

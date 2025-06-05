@@ -7,7 +7,7 @@ import {useEffect, useState} from "react";
 import {FiMenu} from "react-icons/fi";
 
 const Nav = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
+    const [isMobile, setIsMobile] = useState(false);
 
     const menu = (<div className={"navInCenterOfNav"}>
         <div className={"blockForItemNav"}>
