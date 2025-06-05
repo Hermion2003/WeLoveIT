@@ -4,7 +4,11 @@
   padding: 10px 50px;
   background-color: white;
   align-items: center;
+  @media (max-width: 700px) {
+    padding: 10px 10px;
 
+
+  }
   .logoStyleNav {
     width: 50px;
   }
@@ -13,7 +17,10 @@
     display: flex;
     column-gap: 25px;
     align-content: center;
+    @media (max-width: 1000px) {
+      flex-direction: column;
 
+    }
     .blockForItemNav {
       display: flex;
       align-items: center;
@@ -23,6 +30,11 @@
       border-radius: 5px;
       border: 1px solid transparent;
       cursor: not-allowed;
+      @media (max-width: 1000px) {
+        justify-content: space-between;
+        padding: 5px 10px;
+      }
+
 
       .linkInNav {
         color: black;
@@ -30,6 +42,9 @@
         font-size: 16px;
         text-transform: uppercase;
         cursor: not-allowed;
+        @media (max-width: 1250px) {
+          font-size: 12px;
+        }
       }
 
       .iconInItemNav {
@@ -50,6 +65,16 @@
     column-gap: 20px;
     align-items: center;
 
+
+    @media (max-width: 1250px) {
+      column-gap: 4px;
+    }
+@media (max-width: 1000px) {
+  .styleIconNav{
+    display: none;
+  }
+}
+
     .styleIconNav {
       color: #2c2c2c;
       font-size: 40px;
@@ -58,6 +83,10 @@
       border-radius: 5px;
       border: 1px solid transparent;
       cursor: not-allowed;
+
+      @media (max-width: 1250px) {
+        font-size: 35px;
+      }
 
 
       &:hover {
@@ -74,6 +103,11 @@
       padding: 10px 40px;
       font-size: 16px;
       border-radius: 8px;
+      align-content: center;
+      @media (max-width: 1250px) {
+        font-size: 14px;
+        padding: 7px 12px;
+      }
 
       &:hover {
         cursor: pointer;
@@ -81,4 +115,59 @@
       }
     }
   }
+}
+.hamburger{
+  display: none;
+  cursor: pointer;
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+.normalMenu{
+  display: block;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+.mobileMenu{
+  position: fixed;
+  top:0;
+  transition: 300ms;
+height:100%;
+  width: 200px;
+  z-index: 200;
+  right:-100%;
+  display: none;
+  background-color: #ffffff;
+  box-shadow: 2px 0 2px 3px rgba(0, 0, 0, 0.16);
+  .topMenuMobile{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 10px;
+    svg{
+      cursor: pointer;
+    }
+  }
+  .middle{
+    flex-grow: 100;
+  }
+  .bottom{
+padding: 10px;
+    display: flex;
+    gap:10px;
+width: 100%;
+    justify-content: flex-end;
+  }
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+  }
+  &.isOpen{
+    right:0;
+  }
+}
+.styleIconNav{
+  cursor: pointer
 }

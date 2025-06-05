@@ -5,6 +5,11 @@
   border-radius: 30px;
   flex-direction: column;
   padding-top: 40px;
+  position: relative;
+  @media (max-width: 800px) {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
 
   .top {
     display: flex;
@@ -12,6 +17,9 @@
     justify-content: space-between;
     flex-grow: 100;
     padding-bottom: 30px;
+    @media (max-width: 1000px) {
+      justify-content: flex-start;
+    }
 
     .biggerColumn {
       width: 23%;
@@ -19,9 +27,18 @@
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
+      @media (max-width: 1000px) {
+        width: 128px
+      }
+      @media (max-width: 800px) {
+        justify-content: end;
+      }
 
       &:first-of-type {
         padding-right: 30px;
+        @media (max-width: 1000px) {
+          display: none;
+        }
       }
 
       .logoContainer {
@@ -34,6 +51,17 @@
         h3 {
           color: white;
           padding-left: 10px;
+          font-size: 12px;
+          @media (max-width: 1500px) {
+            font-size: 13px;
+          }
+          @media (max-width: 1000px) {
+            font-size: 10px;
+            position: absolute;
+            top: 10px;
+            right: -5px;
+            line-height: 1;
+          }
         }
       }
 
@@ -44,16 +72,24 @@
       .darkBtn,
       .lightBtn {
         font-weight: bold;
-        font-size: 15px;
-        height: 60px;
+        font-size: 14px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         border-radius: 10px;
-        cursor: pointer;
         transition: 300ms;
         cursor: not-allowed;
+        @media (max-width: 1500px) {
+          height: 40px;
+          font-size: 13px;
+        }
+        @media (max-width: 1000px) {
+          font-size: 11px;
+          padding: 5px;
+          height: 35px;
+        }
       }
 
       .lightBtn {
@@ -78,31 +114,65 @@
       }
     }
 
-    .column {
-      width: 19%;
-      //padding-right: 15%;
-      h4 {
-        color: white;
-        padding-bottom: 10px;
-        font-weight: 700;
-        font-size: 20px;
+    .containerForColumns {
+      display: flex;
+      column-gap: 10px;
+      width: 100%;
+      @media (max-width: 800px) {
+        flex-direction: column;
       }
 
-      ul {
-        padding-bottom: 20px;
-        margin: 0;
-        padding-left: 0;
-      }
+      .column {
+        width: 30%;
+        //padding-right: 15%;
+        @media (max-width: 800px) {
+          width: 100%;
+        }
 
-      ul li {
-        padding-top: 9px;
-        list-style-type: none;
-        color: #b3b8c7;
-        transition: color 0.3s;
-        cursor: not-allowed;
+        h4 {
+          color: white;
+          padding-bottom: 10px;
+          font-weight: 700;
+          font-size: 15px;
+          @media (max-width: 1500px) {
+            font-size: 14px;
+          }
+          @media (max-width: 1000px) {
+            font-size: 13px;
+          }
+          @media (max-width: 1000px) {
+            font-size: 12px;
+            width: 100%;
+            height: 18px;
+          }
+        }
 
-        &:hover {
-          color: #f5f6fa;
+        ul {
+          padding-bottom: 20px;
+          margin: 0;
+          padding-left: 0;
+        }
+
+        ul li {
+          padding-top: 9px;
+          list-style-type: none;
+          color: #b3b8c7;
+          transition: color 0.3s;
+          cursor: not-allowed;
+          font-size: 14px;
+          @media (max-width: 1500px) {
+            font-size: 13px;
+          }
+          @media (max-width: 1000px) {
+            font-size: 12px;
+          }
+          @media (max-width: 800px) {
+            padding-top: 4px;
+          }
+
+          &:hover {
+            color: #f5f6fa;
+          }
         }
       }
     }
@@ -115,18 +185,35 @@
     height: 80px;
     font-size: 18px;
     align-items: center;
+    @media (max-width: 800px) {
+      height: 40px;
+    }
 
     .author {
       color: rgba(221, 221, 221, 0.93);
+      font-size: 14px;
+      @media (max-width: 1500px) {
+        font-size: 13px;
+      }
+      @media (max-width: 800px) {
+        font-size: 10px;
+      }
     }
 
     .icons {
       display: flex;
       gap: 30px;
       cursor: not-allowed;
+      @media (max-width: 800px) {
+        gap: 5px;
+      }
 
       svg {
         color: rgba(221, 221, 221, 0.65);
+      }
+
+      @media (max-width: 800px) {
+        font-size: 13px;
       }
     }
   }

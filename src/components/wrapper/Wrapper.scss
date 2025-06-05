@@ -1,9 +1,12 @@
 .wrapperContainer {
- justify-content: center;
+  justify-content: center;
   margin: auto;
-display: flex;
+  display: flex;
   padding: 0 20px;
-  &>div{
+  @media (max-width: 800px) {
+  }
+
+  & > div {
     max-width: 1400px;
     width: 100%;
     display: flex;

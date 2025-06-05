@@ -7,6 +7,9 @@
   justify-content: center;
   & > div {
     padding: 0 50px;
+    @media (max-width: 1000px) {
+      padding:0 10px;
+    }
     width: 100%;
     max-width: 1250px;
   }

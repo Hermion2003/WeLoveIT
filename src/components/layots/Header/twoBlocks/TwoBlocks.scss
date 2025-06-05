@@ -2,11 +2,22 @@
   display: flex;
   justify-content: center;
   column-gap: 20px;
-  height: 250px;
-  position: absolute;
-  bottom: 50px;
+  min-height: 270px;
+  position: relative;
+  padding-bottom: 50px;
   width: 100%;
 
+  @media (max-width: 1250px) {
+    column-gap: 8px;
+  }
+  @media (max-width: 1050px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media (max-width: 800px) {
+flex-direction: column;
+    gap:15px;
+}
   .firstBlock {
     background: #212631;
     width: 60%;
@@ -16,18 +27,33 @@
     align-items: center;
     padding: 25px 10px;
     column-gap: 4px;
-
+    @media (max-width: 1050px) {
+      width: 70%;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+    }
     .blockForAvatar {
       display: flex;
       flex-direction: column;
       align-items: center;
       row-gap: 10px;
       width: 28%;
-
+      @media (max-width:650px) {
+    display: none;
+      }
       .avatarStyleHeader {
         width: 110px;
         border-radius: 100%;
+        @media (max-width: 1250px) {
+          width: 95px;
+        }
+        @media (max-width: 800px) {
+          width: 80px;
+        }
+
       }
+
 
       .helloSpanHeader {
         color: black;
@@ -35,6 +61,11 @@
         border-radius: 15px;
         padding: 10px 10px;
         font-size: 15px;
+        @media (max-width: 1250px) {
+          padding: 7px 7px;
+          font-size: 13px;
+          line-height: 1;
+        }
       }
     }
 
@@ -43,8 +74,17 @@
       flex-direction: column;
       padding: 5px 25px;
       height: 100%;
+      flex-grow: 100;
+      min-height: 145px;
       justify-content: space-between;
+      @media (max-width: 1250px) {
+        padding: 5px 5px;
 
+      }
+      @media (max-width: 1000px) {
+        justify-content: flex-start;
+        gap: 15px;
+      }
       .titleInBlock {
         color: white;
         font-size: 14px;
@@ -65,13 +105,26 @@
 
       .percent {
         color: white;
-        font-size: 80px;
+        font-size: 75px;
+        @media (max-width: 1250px) {
+          font-size: 45px;
+        }
+        @media (max-width: 800px) {
+          font-size: 30px;
+        }
       }
 
       .describeInBlock {
         color: white;
-        width: 250px;
+        max-width: 250px;
+        width: 100%;
         font-size: 15px;
+        @media (max-width: 1250px) {
+          font-size: 13px;
+        }
+        @media (max-width: 800px) {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -85,8 +138,17 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    @media (max-width: 1050px) {
+      width: 30%;
 
+      overflow:initial;
+    }
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
     .avatarBoy {
+
       width: 120px;
       position: absolute;
       border-radius: 100%;
@@ -94,11 +156,28 @@
       right: -80px;
       transform: rotateZ(30deg);
       animation: boyAvatarAnimation 8s infinite;
+      @media (max-width: 1250px) {
+        width: 90px;
+      }
+      @media (max-width: 1180px) {
+        display: none;
+      }
     }
 
     .spanNearBoyAvatar {
       color: white;
-      width: 200px;
+      max-width: 200px;
+      width: 100%;
+      @media (max-width: 1050px) {
+        max-width: 90%;
+        display: flex;
+        justify-content: center;align-items: center;
+        margin: auto;
+        height: 50px;
+      }
+      @media (max-width: 600px) {
+        height: 100px;
+      }
     }
 
     .starsImage1, .starsImage2, .starsImage3, .starsImage4, .starsImage5 {
@@ -106,26 +185,48 @@
       position: absolute;
       top: 10px;
       left: 20px;
+      @media (max-width: 1050px) {
+        left: 10px;
+        top:-5px
+      }
     }
 
     .starsImage2 {
       top: 40px;
       left: 70px;
+      @media (max-width: 1050px) {
+    top:-10px;
+        left: 70px;
+      }
     }
 
     .starsImage3 {
       top: 90px;
       left: 20px;
+      @media (max-width: 1180px) {
+        top:140px;
+      }
+      @media (max-width: 1050px) {
+        top:-5px;
+        right: 20px;
+        left:initial;
+      }
     }
 
     .starsImage4 {
       top: 180px;
       left: 90px;
+      @media (max-width: 1050px) {
+        display: none;
+      }
     }
 
     .starsImage5 {
       top: 160px;
       left: 150px;
+      @media (max-width: 1050px) {
+        display: none;
+      }
     }
   }
 }

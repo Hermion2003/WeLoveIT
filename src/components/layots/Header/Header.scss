@@ -3,25 +3,59 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-bottom: 280px;
 
   .wrapperHeader {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 80vh;
+    @media (max-width: 1200px) {
+      height: 370px;
+
+      //  height: calc(100vh - 80px);
+    }
+
+    @media (max-width: 1000px) {
+
+      gap: 20px;
+    }
+    @media (max-width: 9000px) {
+      padding-left: 15px;
+    }
+    @media (max-width: 700px) {
+      padding-left: 10%;
+      align-items: flex-start;
+      flex-direction: column;
+      height: 340px;
+    }
 
     .leftBlockHeader {
       display: flex;
       flex-direction: column;
       row-gap: 15px;
+      @media (max-width: 1200px) {
+
+        padding-bottom: 20px;
+        //  height: calc(100vh - 80px);
+      }
 
       .titleHeader {
         font-size: 40px;
-        width: 510px;
+        max-width: 510px;
+        width: 100%;
         position: relative;
         z-index: 80;
         margin-bottom: 20px;
+        @media (max-width: 1250px) {
+          font-size: 35px;
+        }
+        @media (max-width: 800px) {
+          font-size: 28px;
+        }
+        @media (max-width: 500px) {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
 
         .redStart {
           color: #D5006DFF;
@@ -30,7 +64,8 @@
         &:before {
           content: "";
           display: flex;
-          width: 545px;
+          max-width: 545px;
+          width: 100%;
           height: 120px;
           background-color: rgba(173, 173, 173, 0.4);
           position: absolute;
@@ -44,7 +79,8 @@
       .containerForVacations {
         display: flex;
         column-gap: 10px;
-        width: 450px;
+        max-width: 450px;
+        width: 100%;
         flex-wrap: wrap;
         row-gap: 8px;
 
@@ -58,6 +94,11 @@
           justify-content: center;
           flex-shrink: 0;
           height: 35px;
+          @media (max-width: 800px) {
+            padding: 5px 10px;
+            height: 25px;
+            font-size: 12px;
+          }
 
           &:last-of-type {
             background-color: rgba(182, 182, 182, 0.37);
@@ -67,6 +108,11 @@
             height: 35px;
             font-size: 12px;
             font-weight: bold;
+            @media (max-width: 800px) {
+              width: 22px;
+              height: 22px;
+              font-size: 11px;
+            }
           }
         }
       }
@@ -85,6 +131,11 @@
           cursor: pointer;
           background: linear-gradient(135deg, #D5006D, #e82c6c);
         }
+
+        @media (max-width: 850px) {
+          width: 200px;
+          font-size: 12px;
+        }
       }
     }
 
@@ -95,6 +146,16 @@
       object-fit: cover;
       box-shadow: -25px -7px 2px 2px rgba(248, 213, 239, 0.38);
       border: 2px dashed #b9b9b9;
+      @media (max-width: 1250px) {
+        width: 250px;
+        height: 250px;
+        box-shadow: -15px -7px 2px 2px rgba(248, 213, 239, 0.38);
+      }
+      @media (max-width: 700px) {
+        width: 150px;
+        height: 150px;
+        display: none;
+      }
     }
   }
 }
